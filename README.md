@@ -21,4 +21,5 @@ run:
 `docker compose up -d`
 
 Once the container is running reach the Jupiter UI at: http://localhost:8888/
-you have to specify a token or password, it is: "spark"
+you have to specify a "password or token", it is: "spark". Then click on "Log in"
+![alt text](readme_img/image.png)
