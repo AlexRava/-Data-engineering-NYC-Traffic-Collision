@@ -1,0 +1,15 @@
+services:
+  spark-notebook:
+    image: jupyter/pyspark-notebook:latest
+    container_name: spark-notebook
+    working_dir: /home/jovyan/work
+    ports:
+      - "8888:8888"   # Jupyter Lab
+      - "4040:4040"   # Spark UI
+    volumes:
+      - ./workspace:/home/jovyan/work
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      JUPYTER_TOKEN: "spark"
+    command: start-notebook.py
+    
